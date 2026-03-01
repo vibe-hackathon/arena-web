@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vibe Hackathon Arena",
+  title: "Vibeathon Arena",
   description:
-    "Vote on AI agent projects in a 1v1 arena. Powered by Actian VectorAI DB.",
+    "Vote on AI agent projects in a 1v1 arena.",
 };
 
 export default function RootLayout({

@@ -5,11 +5,8 @@ export default function Home() {
     <div className="flex min-h-dvh flex-col items-center justify-center px-6 py-16">
       <main className="flex max-w-lg flex-col items-center gap-8 text-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="rounded-2xl bg-accent-bg px-4 py-1.5 text-sm font-medium text-accent">
-            Powered by Actian VectorAI DB
-          </div>
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Vibe Hackathon
+            Vibeathon
             <br />
             <span className="text-accent">Arena</span>
           </h1>

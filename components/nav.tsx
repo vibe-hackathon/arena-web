@@ -16,7 +16,7 @@ export function Nav() {
     <nav className="sticky top-0 z-50 border-b border-card-border bg-card/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
         <Link href="/" className="text-base font-bold text-foreground">
-          Vibe Arena
+          Vibeathon Arena
         </Link>
         <div className="flex items-center gap-1">
           {links.map((link) => (

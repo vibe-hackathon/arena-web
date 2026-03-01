@@ -1,7 +1,6 @@
 import { getDb } from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
 
 const K_FACTOR = 32;
 

@@ -1,10 +1,8 @@
 import { neon } from "@neondatabase/serverless";
-import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { cache } from "react";
 
-export function getDb() {
-  // In Cloudflare Workers, env vars come from getCloudflareContext()
-  const { env } = getCloudflareContext();
-  const dbUrl = (env as any).DATABASE_URL || process.env.DATABASE_URL;
+export const getDb = cache(() => {
+  const dbUrl = process.env.DATABASE_URL;
   
   if (!dbUrl) {
     throw new Error("DATABASE_URL not found in environment");
@@ -12,4 +10,4 @@ export function getDb() {
   
   const sql = neon(dbUrl);
   return sql;
-}
+});

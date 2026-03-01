@@ -14,12 +14,12 @@ export function ProjectCard({ project, label }: ProjectCardProps) {
           {label}
         </span>
       </div>
-      <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-accent-bg to-card-border">
+      <div className="aspect-[957/534] w-full overflow-hidden rounded-xl bg-gradient-to-br from-accent-bg to-card-border">
         <Image
           src={project.image}
           alt={project.title}
-          width={800}
-          height={600}
+          width={957}
+          height={534}
           className="h-full w-full object-cover"
           unoptimized
         />

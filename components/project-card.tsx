@@ -1,4 +1,5 @@
 import { Project } from "@/lib/types";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,10 +14,15 @@ export function ProjectCard({ project, label }: ProjectCardProps) {
           {label}
         </span>
       </div>
-      <div className="aspect-[16/10] w-full overflow-hidden rounded-xl bg-gradient-to-br from-accent-bg to-card-border">
-        <div className="flex h-full items-center justify-center text-4xl font-bold text-accent/20">
-          {project.title[0]}
-        </div>
+      <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-accent-bg to-card-border">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={800}
+          height={600}
+          className="h-full w-full object-cover"
+          unoptimized
+        />
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-bold text-foreground">{project.title}</h3>

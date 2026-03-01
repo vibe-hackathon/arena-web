@@ -1,0 +1,74 @@
+[
+  {
+    "title": "ConnectBridge",
+    "tagline": "Real-time resource connection for the homeless",
+    "description": "ConnectBridge uses AI to match homeless individuals with available resources in real-time, providing personalized recommendations and integrating with existing social services.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_2_poster-12aa2726dc60c8e37.png"
+  },
+  {
+    "title": "VocalEcho",
+    "tagline": "Amplify Underrepresented Voices, Foster Dialogue, Drive Change",
+    "description": "VocalEcho uses AI voice analysis, blockchain transparency, and immersive AR to amplify marginalized communities, fostering inclusive dialogue and driving tangible social change.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_3_poster-151940d883aacd7ef.png"
+  },
+  {
+    "title": "NightEcho AI",
+    "tagline": "Real-time audio guidance for the visually impaired",
+    "description": "An AI-driven navigation app using GPT-4 audio generation and YOLOv8 object detection to provide real-time audio guidance and haptic feedback for the visually impaired.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_4_poster1ad6d8e9aa84933e.png"
+  },
+  {
+    "title": "Echoes of Dissent",
+    "tagline": "Turn every post into a digital protest against censorship",
+    "description": "A platform using blockchain transparency and AI sentiment analysis to amplify silenced voices globally, turning every user post into a form of digital resistance.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_5_poster2c60b63a433352b6.png"
+  },
+  {
+    "title": "HabitHive",
+    "tagline": "Transform your habits into income streams",
+    "description": "HabitHive leverages AI-driven habit tracking, interactive AR avatars, and blockchain rewards to motivate users to turn daily habits into sustainable income streams.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_6_poster229d7f07ca68ba75.png"
+  },
+  {
+    "title": "FreshFlow",
+    "tagline": "Optimize supply chains for fresher produce and less waste",
+    "description": "FreshFlow leverages IoT sensors, predictive analytics, and cloud storage to optimize supply chains, reducing food waste by up to 50% and improving food accessibility.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_7_posterae5be15cfff04e47.png"
+  },
+  {
+    "title": "Radiocure",
+    "tagline": "Precision radioisotope therapy for cancer treatment",
+    "description": "A precision radioisotope therapy platform using TensorFlow and Kubernetes to create personalized cancer treatment plans while minimizing damage to healthy tissues.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_8_poster6ea5ba828586f578.png"
+  },
+  {
+    "title": "UrbanVox",
+    "tagline": "Anonymous social commentary on urban walls via AR",
+    "description": "An AR app transforming urban walls into interactive platforms for anonymous social commentary, enabling users to leave, view, and respond to community messages.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_9_poster365214f5a49686db.png"
+  },
+  {
+    "title": "EduGuru",
+    "tagline": "Personalized learning assistant for every student",
+    "description": "An AI-powered personalized learning assistant that adapts to individual learning styles and needs, with real-time feedback and accessibility features for visually impaired students.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_10_poster1c7134126f681473.png"
+  },
+  {
+    "title": "AI Virtual Therapist",
+    "tagline": "Universal access to mental health care",
+    "description": "An AI-powered virtual therapist platform providing personalized, accessible, and scalable mental health support using NLP emotion detection and cloud infrastructure.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_11_postera55b26b58f3fe2a7.png"
+  },
+  {
+    "title": "VoiceBridge",
+    "tagline": "Empowering citizens for real-time policy influence",
+    "description": "VoiceBridge uses AI-driven sentiment analysis, blockchain transparency, and mobile-first design to enable citizens to directly influence policy decisions in real-time.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_12_poster7873f0b0b5a4bbe9.png"
+  },
+  {
+    "title": "MemeHeal",
+    "tagline": "Turn daily struggles into relatable memes for mental health",
+    "description": "MemeHeal uses AI to generate relatable memes from everyday experiences, bringing humor and empathy to mental health conversations with global community sharing.",
+    "image_url": "https://origin.picgo.net/2026/03/01/team_1_poster93602a3261cfeac2.png"
+  }
+]

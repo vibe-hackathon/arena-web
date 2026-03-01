@@ -7,8 +7,5 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  },
-  "vars": {
-    "DATABASE_URL": "postgresql://neondb_owner:npg_OAtaWyhCU43w@ep-fancy-shadow-ajb7sx6g.c-3.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
   }
 }

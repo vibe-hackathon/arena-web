@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ArenaProvider } from "@/lib/arena-context";
 import { Nav } from "@/components/nav";
 import "./globals.css";
 
@@ -30,10 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ArenaProvider>
-          <Nav />
-          {children}
-        </ArenaProvider>
+        <Nav />
+        {children}
       </body>
     </html>
   );

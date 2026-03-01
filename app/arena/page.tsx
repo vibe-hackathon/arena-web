@@ -1,22 +1,55 @@
 "use client";
 
-import { useArena } from "@/lib/arena-context";
 import { ProjectCard } from "@/components/project-card";
-import { useState } from "react";
-import { VoteResult } from "@/lib/types";
+import { useState, useEffect, useCallback } from "react";
+import { Project, VoteResult } from "@/lib/types";
+import Link from "next/link";
 
 export default function ArenaPage() {
-  const { currentPair, totalVotes, vote } = useArena();
+  const [left, setLeft] = useState<Project | null>(null);
+  const [right, setRight] = useState<Project | null>(null);
   const [animating, setAnimating] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [totalVotes, setTotalVotes] = useState(0);
 
-  const handleVote = (result: VoteResult) => {
-    if (animating) return;
+  const fetchPair = useCallback(async () => {
+    setLoading(true);
+    const res = await fetch("/api/pair");
+    const data = await res.json();
+    setLeft(data.left);
+    setRight(data.right);
+    setLoading(false);
+  }, []);
+
+  const fetchVoteCount = useCallback(async () => {
+    const res = await fetch("/api/leaderboard");
+    const data = await res.json();
+    setTotalVotes(data.totalVotes);
+  }, []);
+
+  useEffect(() => {
+    fetchPair();
+    fetchVoteCount();
+  }, [fetchPair, fetchVoteCount]);
+
+  const handleVote = async (result: VoteResult) => {
+    if (animating || !left || !right) return;
     setAnimating(true);
-    vote(result);
-    setTimeout(() => setAnimating(false), 300);
+
+    await fetch("/api/vote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ leftId: left.id, rightId: right.id, result }),
+    });
+
+    setTotalVotes((v) => v + 1);
+    setTimeout(async () => {
+      await fetchPair();
+      setAnimating(false);
+    }, 300);
   };
 
-  if (!currentPair) {
+  if (loading && !left) {
     return (
       <div className="flex min-h-[60dvh] items-center justify-center">
         <p className="text-muted">Loading projects...</p>
@@ -24,11 +57,8 @@ export default function ArenaPage() {
     );
   }
 
-  const [left, right] = currentPair;
-
   return (
     <div className="mx-auto flex min-h-[calc(100dvh-3.5rem)] max-w-4xl flex-col px-4 py-6">
-      {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold text-foreground">
@@ -38,22 +68,23 @@ export default function ArenaPage() {
             Compare two projects and pick your favorite
           </p>
         </div>
-        <div className="rounded-lg bg-accent-bg px-3 py-1.5 text-sm font-semibold text-accent">
+        <Link
+          href="/leaderboard"
+          className="rounded-lg bg-accent-bg px-3 py-1.5 text-sm font-semibold text-accent"
+        >
           {totalVotes} votes
-        </div>
+        </Link>
       </div>
 
-      {/* Cards */}
       <div
         className={`grid flex-1 grid-cols-1 gap-4 md:grid-cols-2 transition-opacity duration-200 ${
           animating ? "opacity-40" : "opacity-100"
         }`}
       >
-        <ProjectCard project={left} label="A" />
-        <ProjectCard project={right} label="B" />
+        {left && <ProjectCard project={left} label="A" />}
+        {right && <ProjectCard project={right} label="B" />}
       </div>
 
-      {/* Vote buttons */}
       <div className="sticky bottom-0 mt-6 flex gap-3 bg-background pb-6 pt-4">
         <button
           onClick={() => handleVote("left")}
